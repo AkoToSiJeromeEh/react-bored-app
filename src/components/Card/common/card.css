@@ -1,0 +1,87 @@
+.Card__Container {
+    width: 50%;
+    font-family: 'SpaceMono-Jejection';
+    border-radius: 1.4rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: rgb(0, 0, 0);
+    padding: max(2vh, 1.25rem);
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(1.2rem);
+    background:   url('./bg-1.jpg') no-repeat  50% 45% / cover;
+    height: 45vh;
+    text-align: center;
+}
+.Card__Container[data-ison="true"]{
+    color: white;
+    background:   url('./bg-2.jpg') no-repeat  50% 45% / cover;
+}
+.Card__Wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.55rem;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+.Dark__Toggler{
+    border: 0.1rem solid gray;
+    width: 4rem;
+    padding:  0.2rem;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.Dark__Button[data-ison="true"]{
+   margin-left: auto;
+   background-color: rgb(54, 92, 195);
+
+}
+.Dark__Button{
+    background-color: white;
+    padding: 0.65rem;
+    border-radius: 1.25rem;
+    border: none;
+    cursor: pointer;
+}
+
+.Card__Generate >  button {
+    padding: max(1.5vh , 1rem);
+    border-radius: 1.55rem;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(245, 216, 181) ;
+    animation: rotate-360-infinite  2s linear infinite; 
+}
+.Card__Generate >  button[data-ison="true"] {
+    background-color: rgb(8, 18, 194);
+} 
+.Card__Title h2{
+     font-size: 2.3rem;
+     font-variant: small-caps;
+}
+.Card__Generate{
+    position: absolute;
+    bottom: -6%;
+}
+@keyframes rotate-360-infinite {
+    
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media (width < 620px) {
+    
+    .Card__Container{
+        background-position: bottom top;
+        width: 80%;
+    }
+}
+@media (width < 450px) {
+    
+    .Card__Title h2{
+        font-size: 1.8rem;
+   }
+}
